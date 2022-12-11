@@ -74,7 +74,7 @@ ul {
 
 .logo{
   margin-right: 1.5rem;
-  font-family: "Abri; fatface", cursive;
+  font-family: "Abril Fatface", cursive;
   font-size: 1.5rem;
   color: var(--heading-color);
   letter-spacing: 1px;
@@ -87,8 +87,8 @@ ul {
 
 .sub-heading {
   color: var(--heading-color);
-  font-size: 0.85rem;
   text-transform: uppercase;
+  font-size: 0.85rem;
   letter-spacing: 0.5px;
   border-left: 3px solid var(--main-color-2);
   padding: 0.13rem 0.75rem;
@@ -99,7 +99,7 @@ ul {
 .heading{
   color: var(--heading-color);
   font-size: 3rem;
-  font-family: "Abro; Fatface", cursive;
+  font-family: "Abril Fatface", cursive;
   font-weight: 400;
   line-height: 1.3;
 }
@@ -108,7 +108,6 @@ ul {
   color: var(--text-color);
   font-size: 0.9rem;
   margin: 2rem 0;
-  line-height: 2.3;
 }
 
 
@@ -130,6 +129,8 @@ ul {
   color: #fff;
   font-size: 0.85rem;
   letter-spacing: 0.4px;
+  min-width: 125px;
+  text-align: center;
   text-transform: capitalize;
   transition: 0.3s;
 }
@@ -139,6 +140,7 @@ ul {
 }
 
 .btn.secondary-btn {
+  position: relative;
   background-color: transparent;
   color: var(--main-color-1);
   font-weight: 500;
@@ -211,7 +213,7 @@ header .logo {
   line-height: 120px;
 }
 
-header.scrolled.logo{
+header.scrolled .logo{
   height: 80px;
   line-height: 80px;
 }
@@ -229,6 +231,7 @@ header.scrolled.logo{
 }
 
 .nav-link {
+  position: relative;
   display: inline-block;
   margin: 0 1rem;
   text-transform: uppercase;
@@ -294,10 +297,14 @@ header.scrolled.logo{
 
 .showcase-area .container {
   display: grid;
-  grid-template-columns: lfr 550px;
+  grid-template-columns: 1fr 550px;
   height: calc(100vh - 120px);
   max-height: 600px;
   align-items: center;
+}
+
+.showcase-area .sub-heading {
+  margin-bottom: 0.7rem;
 }
 
 .showcase-area .heading{
@@ -312,10 +319,9 @@ header.scrolled.logo{
   position: relative;
   width: 100%;
   min-height: calc(100% + 120px);
-  background-image: linear-gradient(124deg, var(--main-color-1) 53%,
-  var(--main-color-2) 53%);
+  background-image: linear-gradient(124deg, var(--main-color-1) 53%, var(--main-color-2) 53%);
   margin-top: -120px;
-  border-radius: 0 0 80px 80 px;
+  border-radius: 0 0 80px 80px;
 }
 
 .showcase-image .person {
@@ -323,7 +329,7 @@ header.scrolled.logo{
   width: 95%;
   bottom: 0;
   left: 50%;
-  transform: translate(-50%);
+  transform: translateX(-50%);
 }
 
 .showcase-area .circle {
@@ -455,8 +461,110 @@ header.scrolled.logo{
 
 /* --------------- Skills Section Styling --------------- */
 
+.skills {
+  overflow: hidden;
+}
+
+.skills-box {
+  background-color: var(--bg-color-2);
+  padding: 5rem 6rem;
+  border-radius: 20px;
+  width: 100%;
+  position: relative;
+}
+
+.box-desc {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  column-gap: 2rem;
+}
+
+.skills-wrap {
+  display:grid;
+  grid-template-columns: repeat(4, 150px);
+  margin-top: 2rem;
+  justify-content: space-between;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sk-progress {
+  width: 150px;
+  height: 150px;
+  position: relative;
+}
+
+.sk-progress svg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.sk-progress svg circle{
+  fill: var(--bg-color-3);
+  stroke-width: 5px;
+  stroke: var(--main-color-1);
+  stroke-linecap: round;
+  stroke-dasharray: 427;
+  stroke-dashoffset: 427;
+}
+
+@keyframes progress {
+  to {
+    stroke-dashoffset: var(--target);
+  }
+}
+
+.counter{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: var(--heading-color);
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.counter span{
+  font-size: 2.45rem;
+}
+
+.sk-title {
+  color: var(--heading-color);
+  margin-top: 0.75rem;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.skill .dots {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.skill .square {
+  position: absolute;
+  left: 100%;
+  top: 75%;
+  transform: translate(-50%, -50%);
+}
 /* --------------- Sevices Section Styling --------------- */
 
+.services .container{
+  display: grid;
+}
 /* --------------- Portfolio Section Styling --------------- */
 
 /* --------------- Testimonials Section Styling --------------- */
