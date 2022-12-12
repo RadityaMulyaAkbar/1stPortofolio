@@ -22,12 +22,12 @@
     />
 
     <!-- --------- CSS Files --------- -->
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="Css/style.css" />
   </head>
 
-  <body>
+  <body class="stopScrolling">
     <!-- --------- Navbar Start --------- -->
-    <header>
+    <header class="scrolled">
       <nav class="container">
         <a href="#" class="logo">Porto<span>folio</span></a>
         <div class="links">
@@ -632,8 +632,8 @@
                 <div class="sk-title">UI Design</div>
               </div>
             </div>
-            <img src="./Assets/dots.png" class="shape dots">
-            <img src="./Assets/square1.png" class="shape square">
+            <img src="./Assets/dots.png" class="shape dots" />
+            <img src="./Assets/square1.png" class="shape square" />
           </div>
         </div>
       </section>
@@ -641,36 +641,231 @@
       <!-- --------- Services Section --------- -->
 
       <section class="services section">
+        <img src="./Assets/triangle.png" class="shpe triangle" />
         <div class="container">
           <div class="services-info">
             <h3 class="sub-heading">My services</h3>
             <h1 class="heading">Things i may do for my clients</h1>
             <p class="text">
-              From offering in-depth user research, to helping with design and testing, I can help bring your product to life.
+              From offering in-depth user research, to helping with design and
+              testing, I can help bring your product to life.
             </p>
             <div class="milestones">
               <div class="ml">
-                <h2 class="number"><span>2</span>+</h2>
+                <h2 class="number"><span data-target="2">0</span>+</h2>
                 <h5>Years</h5>
               </div>
               <div class="ml">
-                <h2 class="number"><span>20</span>+</h2>
+                <h2 class="number"><span data-target="20">0</span>+</h2>
                 <h5>Projects</h5>
               </div>
               <div class="ml">
-                <h2 class="number"><span>8</span>+</h2>
+                <h2 class="number"><span data-target="8">0</span>+</h2>
                 <h5>Clients</h5>
-              </div>              
+              </div>
             </div>
             <div class="cta">
               <a href="#" class="btn">Hire me</a>
-              <a href="./Assets/markusCV.pdf" download class="btn secondary-btn">Download Cv</a>
+              <a href="./Assets/markusCV.pdf" download class="btn secondary-btn"
+                >Download Cv</a
+              >
             </div>
           </div>
-          <div class="services-grid"></div>
+          <div class="services-grid">
+            <div class="srv-card">
+              <div class="card-desc">
+                <h3>Brand Identity</h3>
+                <p class="text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                  maiores reiciendis dolore distinctio animi ducimus illo!
+                  Reprehenderit modi, fuga asperiores ab quasi possimus tempore.
+                  Perspiciatis qui fuga explicabo aspernatur dolor.
+                </p>
+              </div>
+              <a href="#" class="btn secondary-btn">Explore More</a>
+            </div>
+            <div class="srv-card">
+              <div class="card-desc">
+                <h3>Brand Identity</h3>
+                <p class="text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                  maiores reiciendis dolore distinctio animi ducimus illo!
+                  Reprehenderit modi, fuga asperiores ab quasi possimus tempore.
+                  Perspiciatis qui fuga explicabo aspernatur dolor.
+                </p>
+              </div>
+              <a href="#" class="btn secondary-btn">Explore More</a>
+            </div>
+            <div class="srv-card">
+              <div class="card-desc">
+                <h3>Product Design</h3>
+                <p class="text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Impedit provident beatae vitae, qui possimus fugit ut ducimus
+                  dolor voluptate animi consequatur harum perspiciatis, et
+                  veritatis illum minus alias in quam?
+                </p>
+              </div>
+              <a href="#" class="btn secondary-btn">Explore More</a>
+            </div>
+            <div class="srv-card">
+              <div class="card-desc">
+                <h3>Integration Design</h3>
+                <p class="text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                  maiores reiciendis dolore distinctio animi ducimus illo!
+                  Reprehenderit modi, fuga asperiores ab quasi possimus tempore.
+                  Perspiciatis qui fuga explicabo aspernatur dolor.
+                </p>
+              </div>
+              <a href="#" class="btn secondary-btn">Explore More</a>
+            </div>
+            <img src="./Assets/square1.png" alt="" class="shape square" />
+          </div>
         </div>
       </section>
+
       <!-- --------- Portfolio Section --------- -->
+
+      <section class="portofolio section">
+        <div class="modal">
+          <div class="modal-overlay"></div>
+          <div class="slider-wrap">
+            <div class="prev-btn navigation">
+              <i class="uil uil-angle-left-b"></i>
+            </div>
+            <div class="images">
+              <img class="showImage" src="Assets/port1.jpg">
+              <img src="Assets/port2.png">
+              <img src="Assets/port3.jpg">
+              <img src="Assets/port4.png">
+              <img src="Assets/port5.png">
+              <img src="Assets/port6.jpg">
+            </div>
+            <div class="next-btn navigation">
+              <i class="uil uil-angle-right-b"></i>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="portofolio-header">
+            <div class="portofolio-title">
+              <h3 class="sub-heading">Portofolio</h3>
+              <h1 class="heading">Latest Projects</h1>
+            </div>
+            <div class="filter-btns">
+              <button class="filter-btn" data-filter="all">All</button>
+              <button class="filter-btn" data-filter=".product">Product</button>
+              <button class="filter-btn" data-filter=".inter">Interacting</button>
+              <button class="filter-btn" data-filter=".web">Web App</button>
+            </div>
+          </div>
+          <div class="portofolio-gallery">
+            <div class="mix prt-card inter">
+              <div class="prt-image">
+                <img src="./Assets/port1.jpg" alt="" />
+                <div class="prt-overlay">
+                  <span class="prt-icon zoom-icon" style="--i: 0s">
+                    <i class="uil uil-search-plus"></i>
+                  </span>
+                  <a href="" class="prt-icon" style="--i: 0.15s">
+                    <i class="uil uil-link-h"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="prt-desc">
+                <h3>Lorem, ipsum.</h3>
+                <a href="#" class="btn secondary-btn sm">Read More</a>
+              </div>
+            </div>
+            <div class="mix prt-card product">
+              <div class="prt-image">
+                <img src="./Assets/port2.png" alt="" />
+                <div class="prt-overlay">
+                  <span class="prt-icon zoom-icon" style="--i: 0s">
+                    <i class="uil uil-search-plus"></i>
+                  </span>
+                  <a href="" class="prt-icon" style="--i: 0.15s">
+                    <i class="uil uil-link-h"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="prt-desc">
+                <h3>Lorem, ipsum dolor.</h3>
+                <a href="#" class="btn secondary-btn sm">Read More</a>
+              </div>
+            </div>
+            <div class="mix prt-card web">
+              <div class="prt-image">
+                <img src="./Assets/port3.jpg" alt="" />
+                <div class="prt-overlay">
+                  <span class="prt-icon zoom-icon" style="--i: 0s">
+                    <i class="uil uil-search-plus"></i>
+                  </span>
+                  <a href="" class="prt-icon" style="--i: 0.15s">
+                    <i class="uil uil-link-h"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="prt-desc">
+                <h3>Lorem ipsum dolor sit.</h3>
+                <a href="#" class="btn secondary-btn sm">Read More</a>
+              </div>
+            </div>
+            <div class="mix prt-card web">
+              <div class="prt-image">
+                <img src="./Assets/port4.png" alt="" />
+                <div class="prt-overlay">
+                  <span class="prt-icon zoom-icon" style="--i: 0s">
+                    <i class="uil uil-search-plus"></i>
+                  </span>
+                  <a href="" class="prt-icon" style="--i: 0.15s">
+                    <i class="uil uil-link-h"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="prt-desc">
+                <h3>Lorem, ipsum.</h3>
+                <a href="#" class="btn secondary-btn sm">Read More</a>
+              </div>
+            </div>
+            <div class="mix prt-card inter">
+              <div class="prt-image">
+                <img src="./Assets/port5.png" alt="" />
+                <div class="prt-overlay">
+                  <span class="prt-icon zoom-icon" style="--i: 0s">
+                    <i class="uil uil-search-plus"></i>
+                  </span>
+                  <a href="" class="prt-icon" style="--i: 0.15s">
+                    <i class="uil uil-link-h"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="prt-desc">
+                <h3>Lorem, ipsum dolor.</h3>
+                <a href="#" class="btn secondary-btn sm">Read More</a>
+              </div>
+            </div>
+            <div class="mix prt-card web">
+              <div class="prt-image">
+                <img src="./Assets/port6.jpg" alt="" />
+                <div class="prt-overlay">
+                  <span class="prt-icon zoom-icon" style="--i: 0s">
+                    <i class="uil uil-search-plus"></i>
+                  </span>
+                  <a href="" class="prt-icon" style="--i: 0.15s">
+                    <i class="uil uil-link-h"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="prt-desc">
+                <h3>Lorem ipsum dolor sit.</h3>
+                <a href="#" class="btn secondary-btn sm">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- --------- Testimonials Section --------- -->
 
@@ -686,7 +881,7 @@
     <!-- JavaScript Files -->
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="./js/mixitup.min.js"></script>
-    <script src="./js/app.js"></script>
+    <script src="Js/mixitup.min.js"></script>
+    <script src="Js/app.js"></script>
   </body>
 </html>

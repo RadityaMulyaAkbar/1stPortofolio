@@ -4,8 +4,19 @@ const first_skill = document.querySelector(".skill:first-child");
 const sk_counters = document.querySelectorAll(".counter span");
 const progress_bars = document.querySelectorAll(".skills svg circle");
 
+const ml_section = document.querySelector(".milestones");
+const ml_counters = document.querySelectorAll(".number span");
+
+const prt_section = document.querySelector(".portofolio");
+const zoom_icons = document.querySelectorAll(".zoom-icon");
+const modal_overlay = document.querySelector(".modal-overlay");
+const images = document.querySelectorAll(".images img");
+const prev_btn = document.querySelector(".prev-btn");
+const next_btn = document.querySelector(".next-btn");
+
 window.addEventListener("scroll", () => {
-   if (!skillsPlayed) skillsCounter()
+   if (!skillsPlayed) skillsCounter();
+   if (!mlPlayed) mlCounter();
 });
 /* --------------- Grab elements from DOM --------------- */
 
@@ -75,9 +86,58 @@ function skillsCounter() {
 
 /* --------------- Services Counter Animation --------------- */
 
+let mlPlayed = false
+
+function mlCounter() {
+    if (!hasReached(ml_section)) return;
+    mlPlayed = true;
+
+    ml_counters.forEach((ctr) => {
+        let target = +ctr.dataset.target;
+
+        setTimeout(() => {
+            updateCount(ctr, target);
+        }, 400)
+    })
+}
 /* --------------- Portfolio Filter Animation --------------- */
 
+let mixer = mixitup(".portofolio-gallery", {
+    selectors: {
+        target: ".prt-card",
+    },
+    animation: {
+        duration: 500,
+    },
+});
 /* --------------- Modal Pop Up Animation Animation --------------- */
+
+let currentIndex = 0;
+
+zoom_icons.forEach((icn,i) =>
+    icn.addEventListener("click", () => {
+        prt_section.classList.add("open");
+        document.body.classList.add("stopScrolling");
+        currentIndex = i;
+        changeImage(currentIndex);
+    })
+);
+
+modal_overlay.addEventListener("click", () => {
+    prt_section.classList.remove("open");
+    document.body.classList.remove("stopScrolling");
+});
+
+prev_btn.addEventListener("click", () => {
+    currentIndex--;
+    console.log(currentIndex);
+    changeImage(currentIndex);
+})
+
+function changeImage(index) {
+    images.forEach(img => img.classList.remove("showImage"));
+    images[index].classList.add("showImage");
+}
 
 /* --------------- Modal Pop Up Animation Animation --------------- */
 
