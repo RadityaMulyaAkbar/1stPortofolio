@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="Css/style.css" />
   </head>
 
-  <body class="stopScrolling">
+  <body>
     <!-- --------- Navbar Start --------- -->
     <header class="scrolled">
       <nav class="container">
@@ -728,19 +728,19 @@
       <!-- --------- Portfolio Section --------- -->
 
       <section class="portofolio section">
-        <div class="modal">
+        <div class="modal stopScrolling">
           <div class="modal-overlay"></div>
           <div class="slider-wrap">
             <div class="prev-btn navigation">
               <i class="uil uil-angle-left-b"></i>
             </div>
             <div class="images">
-              <img class="showImage" src="Assets/port1.jpg">
-              <img src="Assets/port2.png">
-              <img src="Assets/port3.jpg">
-              <img src="Assets/port4.png">
-              <img src="Assets/port5.png">
-              <img src="Assets/port6.jpg">
+              <img class="showImage" src="Assets/port1.jpg" />
+              <img src="Assets/port2.png" />
+              <img src="Assets/port3.jpg" />
+              <img src="Assets/port4.png" />
+              <img src="Assets/port5.png" />
+              <img src="Assets/port6.jpg" />
             </div>
             <div class="next-btn navigation">
               <i class="uil uil-angle-right-b"></i>
@@ -756,7 +756,9 @@
             <div class="filter-btns">
               <button class="filter-btn" data-filter="all">All</button>
               <button class="filter-btn" data-filter=".product">Product</button>
-              <button class="filter-btn" data-filter=".inter">Interacting</button>
+              <button class="filter-btn" data-filter=".inter">
+                Interacting
+              </button>
               <button class="filter-btn" data-filter=".web">Web App</button>
             </div>
           </div>
@@ -868,8 +870,87 @@
       </section>
 
       <!-- --------- Testimonials Section --------- -->
-
+      <section class="testimonials section">
+        <div class="container">
+          <div class="section-background">
+            <img src="./Assets/person2.png" class="person" alt="" />
+            <img src="./Assets/circle2.png" class="circle" alt="" />
+            <img src="./Assets/square1.png" class="square" alt="" />
+          </div>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="client">
+                  <img src="./Assets/testi1.png" alt="" />
+                  <div class="client-info">
+                    <h4>Kelly Williams</h4>
+                    <h5>Executive Officer <a href="#">@ABEnergy</a></h5>
+                  </div>
+                  <q class="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Minus incidunt possimus optio dolor maiores, nisi assumenda
+                    adipisci saepe accusamus rem omnis distinctio accusantium
+                    suscipit et, temporibus dolores iusto, ab in.
+                  </q>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="client">
+                  <img src="./Assets/testi2.png" alt="" />
+                  <div class="client-info">
+                    <h4>Steve Kers</h4>
+                    <h5>CEO of <a href="#">@Eco_Focus</a></h5>
+                  </div>
+                  <q class="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aliquid commodi cum reprehenderit odio ducimus corporis,
+                    magnam modi impedit quidem voluptatibus.
+                  </q>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="client">
+                  <img src="./Assets/testi3.png" alt="" />
+                  <div class="client-info">
+                    <h4>Kylo Ren</h4>
+                    <h5>Software Engineer <a href="#">@Epic_Dev</a></h5>
+                  </div>
+                  <q class="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+                    debitis quam corrupti repudiandae exercitationem asperiores
+                    voluptates temporibus suscipit, aliquid inventore soluta ad
+                    quibusdam, praesentium commodi ipsum fugit recusandae
+                    reprehenderit nobis.
+                  </q>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="testimonials-title">
+            <h3 class="sub-heading">Testimonials</h3>
+            <h1 class="heading">Hear from my happy clients</h1>
+          </div>
+        </div>
+      </section>
       <!-- --------- Contact Section --------- -->
+      <section class="contact section">
+        <div class="container">
+          <div class="contact-info">
+            <h3 class="sub-heading">Contact Me</h3>
+            <h1 class="heading">Let's work together</h1>
+            <p class="text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione
+              rerum architecto consectetur suscipit, totam corporis!
+            </p>
+            <a href="mailto:radityama8@gmail.com" class="mail">radityama8@gmail.com
+              <i class="uil uil-arrow-right"></i>
+            </a>
+          </div>
+
+          <form action="index.html" class="contact-form"></form>
+        </div>
+      </section>
 
       <!-- --------- Subscription Section --------- -->
     </main>

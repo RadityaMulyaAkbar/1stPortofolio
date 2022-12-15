@@ -129,10 +129,24 @@ modal_overlay.addEventListener("click", () => {
 });
 
 prev_btn.addEventListener("click", () => {
-    currentIndex--;
-    console.log(currentIndex);
+    if (currentIndex === 0) {
+        currentIndex = 5;
+    } else {
+        currentIndex--;
+    }
     changeImage(currentIndex);
-})
+    
+});
+
+next_btn.addEventListener("click", () => {
+    if (currentIndex === 5) {
+        currentIndex = 0;
+    } else {
+        currentIndex++;
+    }
+    changeImage(currentIndex);
+    
+});
 
 function changeImage(index) {
     images.forEach(img => img.classList.remove("showImage"));
@@ -140,6 +154,16 @@ function changeImage(index) {
 }
 
 /* --------------- Modal Pop Up Animation Animation --------------- */
+
+const swiper = new Swiper(".swiper", {
+    loop: true,
+    speed: 500,
+    autoplay: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+    },
+});
 
 /* --------------- Change Active Link On Scroll --------------- */
 
