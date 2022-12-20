@@ -238,7 +238,7 @@ ul {
 .form-input {
   display: inline-block;
   padding: 0.9rem 1.5rem;
-  background-color: var(--bg-color-3);
+  background: var(--bg-color-3);
   border: 2px solid var(--bg-color-3);
   width: 100%;
   border-radius: 17px;
@@ -394,7 +394,7 @@ header.scrolled .logo {
   display: grid;
   grid-template-columns: 1fr 550px;
   height: calc(100vh - 120px);
-  max-height: 600px;
+  height: 600px;
   align-items: center;
 }
 
@@ -1247,11 +1247,120 @@ footer .social-media {
 /* --------------- 1000px Screens --------------- */
 
 @media (max-width: 1000px) {
+  .sub-heading {
+    font-size: 0.75rem;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .showcase-area .heading {
+    font-size: 2.7rem;
+  }
+
+  .text {
+    font-size: 0.84rem;
+    margin: 1.3rem 0;
+  }
+
+  .btn {
+    padding: 0.8rem 1.6rem;
+    font-size: 0.8rem;
+    border-radius: 15px;
+    min-width: 100px;
+  }
+
+  .btn.secondary-btn{
+    font-size: 0.85rem;
+  }
+
+  .form-input{
+    padding: 0.8rem 1.45rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+  }
+
+  .logo {
+    font-size: 1.45rem;
+  }
+
+  header .logo {
+    height: 100px;
+    line-height: 100px;
+  }
+
+  .nav-link{
+    font-size: 0.7rem;
+  }
+
+  .showcase-area {
+    padding: 100px 0;
+  }
+
+  .showcase-area .container{
+    grid-template-columns: 1fr 400px;
+    height: 450px;
+  }
+
+  .skills-box {
+    padding: 4rem;
+  }
+
+  .sk-progress {
+    transform: scale(0.85);
+  }
+
+  .services .container {
+    column-gap: 2.5rem;
+  }
+  .contact .container{
+    column-gap: 2.5rem;
+  }
+
+  .contact-form{
+    padding: 2.5rem 2rem;
+  }
+
+  .contact-form h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact .form-input {
+    margin-bottom: 0.8rem;
+  }
+
+  .sub-box {
+    padding: 3.5rem 2.5rem;
+    column-gap: 2rem;
+  }
+
+  .filter-btn {
+    font-size: 0.7rem;
+  }
 }
 
 /* --------------- 768px Screens --------------- */
 
 @media (max-width: 768px) {
+  :root {
+    --section-padding : 4.5rem;
+  }
+
+  .triangle {
+    width: 95px;
+    opacity: 0.18;
+  }
+
+  .dots {
+    width: 112px;
+  }
+
+  .square {
+    width: 70px;
+    transition: 0.3s opacity;
+  }
 }
 
 /* --------------- 500px Screens --------------- */
